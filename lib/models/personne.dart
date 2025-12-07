@@ -9,7 +9,7 @@ abstract class Personne {
   final String matricule;
 
   Personne({
-    required this.prenom,
+    required this.prenom, // Obligatoire : prénom
     required this.nom,
     required this.matricule,
   });
