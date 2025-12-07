@@ -1,19 +1,19 @@
-// Enseignant hérite de Personne.
-// C'est une classe simple qui montre l'héritage.
+import 'package:app1/models/personne.dart'; // Héritage de Personne
 
-import 'package:app1/models/personne.dart';
-
+// Classe Enseignant
 class Enseignant extends Personne {
-  // Attribut spécifique aux enseignants
-  final String matiere;
 
+  final String matiere; // Attribut spécifique à l'enseignant
+
+  // Constructeur
   Enseignant({
-    required super.prenom,
+    required super.prenom,      // héritage du constructeur parent
     required super.nom,
     required super.matricule,
-    required this.matiere,
+    required this.matiere,      // obligatoire pour enseignant
   });
 
+  // Méthodes obligatoires héritées de Personne
   @override
   String getPrenom() => prenom;
 
