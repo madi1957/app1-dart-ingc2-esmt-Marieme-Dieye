@@ -41,9 +41,12 @@ class Etudiant extends Personne {
   }
 
   // Constructeur automatique à partir d'un Map
+  // Factory pour créer un objet Etudiant depuis un Map
+// factory = constructeur spécial qui peut retourner un objet déjà existant ou en créer un nouveau
   factory Etudiant.fromMap(Map<String, dynamic> et) {
+    //Ici, on utilise les clés du Map pour remplir les attributs de l'étudiant
     return Etudiant(
-      prenom: et["prenom"],
+      prenom: et["prenom"], // On prend la valeur associée à la clé "prenom"
       nom: et["nom"],
       matricule: et["matricule"],
       note: et["note"],
