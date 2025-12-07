@@ -21,10 +21,13 @@ void main() async {
   // Affichage avec toString()
   print(e.toString());
 
-  print("\n==== Utilisation d’un Map pour créer un Étudiant ====");
+  print("\n-----Utilisation d’un Map pour créer un Étudiant ----");
+// Déclaration d'un Map pour un étudiant
+// clé (String) : nom de l'attribut
+// valeur (dynamic) : valeur associée, peut être n'importe quel typ
 
   Map<String, dynamic> etudiantMap = {
-    "prenom": "Abdoul Razak",
+    "prenom": "Abdoul Razak", // clé "prenom", valeur "Abdoul Razak"
     "nom": "Issaka",
     "matricule": "0072",
     "note": 18.75,
@@ -34,7 +37,7 @@ void main() async {
   e2.moyenne = 19;
   print(e2.toString());
 
-  print("\n==== Appel API (exemple) ====");
+  print("\n---- Appel API (exemple) ----");
 
   final result =
       await ApiServices.getData("https://jsonplaceholder.typicode.com/users");
